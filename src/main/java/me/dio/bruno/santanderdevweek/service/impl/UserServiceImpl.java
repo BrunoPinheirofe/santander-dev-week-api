@@ -21,8 +21,10 @@ public class UserServiceImpl implements UserService {
         return userRepository.findById(id).orElseThrow(NoSuchElementException::new);
     }
 
+
+
     @Override
-    public User creat(User userToCreated) {
+    public User create(User userToCreated) {
         if(userRepository.existsByAccountNumber(userToCreated.getAccount().getNumber())){
             throw new IllegalArgumentException("This account number already exists.");
         }

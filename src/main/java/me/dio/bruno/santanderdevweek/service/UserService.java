@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserService {
     User findByID(Long id);
-    User creat(User userToCreated);
+    User create(User userToCreated);
 
 }
